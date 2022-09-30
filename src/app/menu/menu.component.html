@@ -1,0 +1,9 @@
+<ul id="menu">
+    <li><span> </span></li>
+    <li routerLink="/list"><span>En Web</span></li>
+    <li routerLink="/us"><span>Acerca de</span></li>
+    <li id="acceso" *ngIf="miToken == 0" class="acceso" routerLink="/login"><span>Acceso</span></li>
+    <li id="acceso" *ngIf="miToken != 0" class="acceso" (click)="logout()"><span><strong>Usuario:</strong> {{
+            userName }}</span>
+    </li>
+</ul>
